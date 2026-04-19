@@ -21,14 +21,8 @@ export default function PricingSection() {
               <span className="italic text-[#C4704A]">Infinite scale.</span>
             </h2>
             <p className="text-[#A3A3A3] font-inter text-lg mb-10 max-w-sm">
-              We believe every farmer deserves access to top-tier agritech. Start for free, upgrade when your cooperative grows.
+              Reserve your plan now. Launch pricing locked in at signup.
             </p>
-            
-            <Link href="/signup">
-              <button className="w-full sm:w-auto min-w-[200px] bg-gradient-to-r from-[#aad19b] to-[#769a68] text-[#11300a] px-8 py-4 rounded-md font-inter font-medium tracking-wide hover:opacity-90 transition-opacity">
-                Start Your Free Trial
-              </button>
-            </Link>
           </motion.div>
         </div>
 
@@ -56,9 +50,11 @@ export default function PricingSection() {
               <li className="flex gap-3 items-center opacity-50"><span className="text-[#43483f]">—</span> Priority Support</li>
             </ul>
 
-            <button className="w-full bg-[#1C1C1A] border border-white/10 text-white py-3 rounded text-sm font-inter hover:bg-white/5 transition-colors">
-              Get Started Free
-            </button>
+            <Link href="#waitlist">
+              <button className="w-full bg-[#1C1C1A] border border-white/10 text-white py-3 rounded-full text-sm font-inter hover:bg-white/5 transition-colors">
+                Reserve Free Spot
+              </button>
+            </Link>
           </motion.div>
 
           {/* Premium Tier */}
@@ -88,9 +84,11 @@ export default function PricingSection() {
               <li className="flex gap-3 items-center"><span className="text-[#6B8F5E]">✓</span> 24/7 Priority Support</li>
             </ul>
             
-            <button className="w-full bg-[#6B8F5E] text-[#11300a] py-3 rounded text-sm font-bold font-inter hover:bg-[#8AAF7C] transition-colors relative z-10">
-              Get Started
-            </button>
+            <Link href="#waitlist">
+              <button className="w-full bg-[#6B8F5E] text-[#11300a] py-3 rounded-full text-sm font-bold font-inter hover:bg-[#8AAF7C] transition-colors relative z-10">
+                Reserve Cooperative Access
+              </button>
+            </Link>
           </motion.div>
         </div>
 

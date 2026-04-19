@@ -240,7 +240,7 @@ export default function TestimonialsStatic() {
           viewport={{ once: true }}
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-5"
         >
-          <span className="text-xs font-inter tracking-wider text-[#A3A3A3] uppercase">Voices of the Field</span>
+          <span className="text-xs font-inter tracking-wider text-[#A3A3A3] uppercase">Beta Farmers</span>
         </motion.div>
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -249,12 +249,12 @@ export default function TestimonialsStatic() {
           transition={{ delay: 0.1 }}
           className="text-4xl md:text-5xl font-outfit text-white font-light leading-tight max-w-xl"
         >
-          Trusted by <span className="text-[#C4704A] italic">hundreds</span> of farmers.
+          Trusted by <span className="text-[#C4704A] italic">Beta Farmers</span>.
         </motion.h2>
       </div>
 
-      {/* Canvas area */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-16 relative" style={{ height: 900 }}>
+      {/* Desktop Canvas area - Hidden on mobile */}
+      <div className="hidden md:block max-w-7xl mx-auto px-6 lg:px-16 relative" style={{ height: 900 }}>
         {editMode && (
           <div
             className="absolute inset-0 pointer-events-none z-0 opacity-10"
@@ -313,6 +313,34 @@ export default function TestimonialsStatic() {
               </div>
             </DraggableElement>
           </div>
+        ))}
+      </div>
+
+      {/* Mobile View - Clean stacked reviews */}
+      <div className="block md:hidden px-6 pb-20 space-y-4">
+        {testimonials.map((t, i) => (
+          <motion.div 
+            key={i}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
+            className="bg-[#1C1C1A] border border-white/[0.07] rounded-2xl p-6 shadow-xl"
+          >
+            <span className="block text-4xl leading-none text-[#C4704A]/30 font-outfit mb-1">"</span>
+            <p className="text-[#e5e2de] font-inter text-base leading-relaxed mb-6">
+              {t.quote}
+            </p>
+            <div className="flex items-center gap-4 pt-4 border-t border-white/5">
+              <div className="w-10 h-10 rounded-full bg-[#6B8F5E]/20 flex items-center justify-center text-[#aad19b] font-outfit text-base flex-shrink-0">
+                {t.author.charAt(0)}
+              </div>
+              <div>
+                <h4 className="text-white font-outfit text-sm font-medium">{t.author}</h4>
+                <p className="text-[#A3A3A3] font-inter text-xs mt-0.5">{t.location}</p>
+              </div>
+            </div>
+          </motion.div>
         ))}
       </div>
     </section>

@@ -34,14 +34,11 @@ export default function Navbar() {
         </Link>
         
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="/assistant" className="text-sm text-text-muted hover:text-text transition-colors">
-            AI Assistant
+          <Link href="/features" className="text-sm text-text-muted hover:text-text transition-colors">
+            Features
           </Link>
-          <Link href="/mapping" className="text-sm text-text-muted hover:text-text transition-colors">
-            Land Mapping
-          </Link>
-          <Link href="/reviews" className="text-sm text-text-muted hover:text-text transition-colors">
-            Reviews
+          <Link href="/story" className="text-sm text-text-muted hover:text-text transition-colors">
+            Our Story
           </Link>
         </nav>
 

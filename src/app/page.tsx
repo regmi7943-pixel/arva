@@ -23,7 +23,7 @@ export default function Home() {
         {/* Tonal Overlay for Text Readability */}
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#1C1C1A]/20 via-transparent to-[#1C1C1A]"></div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-2">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-32 lg:pt-40">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             
             {/* Left Content */}
@@ -42,7 +42,7 @@ export default function Home() {
                 The intelligent agritech companion for Nepal. We transform localized data into actionable insight—from geospatial soil analysis to predictive crop health.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center gap-6">
+              <div className="flex flex-row items-center gap-3 sm:gap-6">
                 <Link 
                   href="#waitlist"
                   className="px-8 py-4 rounded-xl bg-[#6B8F5E] text-white font-medium hover:bg-[#5a7a4f] transition-all flex items-center gap-2 group"
@@ -51,10 +51,10 @@ export default function Home() {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
-                  href="/mapping"
+                  href="/features"
                   className="px-8 py-4 rounded-xl bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 transition-all"
                 >
-                  Explore Mapping
+                  Explore Features
                 </Link>
               </div>
 
@@ -62,12 +62,12 @@ export default function Home() {
               <div className="mt-16 pt-12 border-t border-white/5 w-full">
                 <div className="flex flex-wrap items-center gap-8 opacity-60">
                   <div className="flex flex-col">
-                    <span className="text-2xl font-outfit text-white">5,000+</span>
-                    <span className="text-xs uppercase tracking-tighter text-[#A3A3A3]">Active Farmers</span>
+                    <span className="text-2xl font-outfit text-white font-light tracking-tight">200+</span>
+                    <span className="text-[10px] uppercase tracking-widest text-[#A3A3A3] font-inter">Waitlist Joiners</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-2xl font-outfit text-white">98%</span>
-                    <span className="text-xs uppercase tracking-tighter text-[#A3A3A3]">Accuracy Rate</span>
+                    <span className="text-2xl font-outfit text-white font-light tracking-tight">99%</span>
+                    <span className="text-[10px] uppercase tracking-widest text-[#A3A3A3] font-inter">Model Accuracy</span>
                   </div>
                 </div>
               </div>

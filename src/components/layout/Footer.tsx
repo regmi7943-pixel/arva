@@ -22,9 +22,8 @@ export default function Footer() {
           <div>
             <h4 className="font-display text-sm font-medium mb-6 text-text">Features</h4>
             <ul className="space-y-4">
-              <li><Link href="/assistant" className="text-sm text-text-muted hover:text-text transition-colors">Crop Assistant</Link></li>
-              <li><Link href="/mapping" className="text-sm text-text-muted hover:text-text transition-colors">Land Mapping</Link></li>
-              <li><Link href="#" className="text-sm text-text-muted hover:text-text transition-colors">Weather Integration</Link></li>
+              <li><Link href="/features" className="text-sm text-text-muted hover:text-text transition-colors">Features</Link></li>
+              <li><Link href="/story" className="text-sm text-text-muted hover:text-text transition-colors">Our Story</Link></li>
             </ul>
           </div>
 
