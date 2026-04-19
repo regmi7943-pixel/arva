@@ -48,7 +48,7 @@ export default function FeaturesPage() {
     <main className="min-h-screen bg-[#1C1C1A] text-white selection:bg-[#6B8F5E]/30 selection:text-white">
       
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[70vh] flex flex-col items-center justify-center px-6 pt-32 text-center">
+      <section className="relative min-h-[70vh] flex flex-col items-center justify-center px-6 pt-24 text-center">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-[#6B8F5E] rounded-full blur-[160px] opacity-10"></div>
         </div>

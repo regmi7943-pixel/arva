@@ -23,22 +23,22 @@ export default function Home() {
         {/* Tonal Overlay for Text Readability */}
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#1C1C1A]/20 via-transparent to-[#1C1C1A]"></div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-32 lg:pt-40">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-20 lg:pt-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             
             {/* Left Content */}
             <div className="flex flex-col items-start">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#6B8F5E] animate-pulse"></span>
                 <span className="text-xs font-inter tracking-wider text-[#A3A3A3] uppercase">Arva is coming soon</span>
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-outfit font-light tracking-tight text-white max-w-xl mb-8 leading-[1.1]">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-outfit font-light tracking-tight text-white max-w-xl mb-6 leading-[1.1]">
                 Precision farming,<br />
                 <span className="text-[#C4704A] italic">unbound</span> by intuition.
               </h1>
 
-              <p className="text-lg md:text-xl font-inter text-[#A3A3A3] font-light max-w-md mb-12 leading-relaxed">
+              <p className="text-lg md:text-xl font-inter text-[#A3A3A3] font-light max-w-md mb-8 leading-relaxed">
                 The intelligent agritech companion for Nepal. We transform localized data into actionable insight—from geospatial soil analysis to predictive crop health.
               </p>
 
