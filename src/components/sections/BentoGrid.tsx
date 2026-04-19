@@ -202,7 +202,7 @@ export default function BentoGrid() {
             <FeatureTag text="AI Vision" type="terracotta" />
             <div className="absolute top-0 right-0 w-1/2 h-full bg-[#6B8F5E]/5 blur-[80px]" />
             
-            <div className="h-full flex flex-col sm:flex-row gap-8 items-center sm:items-stretch">
+            <div className="h-full flex flex-col sm:flex-row gap-8 items-center sm:items-stretch pt-12 sm:pt-0">
               <div className="flex-1 flex flex-col justify-end relative z-10">
                 <h3 className="text-3xl md:text-4xl font-outfit text-white mb-3 tracking-tight">AI Crop Diagnostics</h3>
                 <p className="text-[#A3A3A3] font-inter text-sm md:text-base leading-relaxed max-w-sm">
@@ -223,7 +223,9 @@ export default function BentoGrid() {
             className="md:col-span-1 bg-[#232321] rounded-3xl p-8 relative overflow-hidden border border-white/10 flex flex-col justify-between"
           >
             <FeatureTag text="Live Weather" />
-            <WeatherWidget />
+            <div className="pt-10">
+              <WeatherWidget />
+            </div>
             <div className="mt-4">
               <h3 className="text-2xl font-outfit text-white mb-2">Micro-climate</h3>
               <p className="text-[#A3A3A3] font-inter text-xs leading-relaxed">Hyper-local forecasting that understands valley dynamics and altitude variances.</p>
@@ -257,7 +259,7 @@ export default function BentoGrid() {
             <FeatureTag text="Satellite Mapping" type="sage" />
             <MiniMap />
             
-            <div className="h-full flex flex-col justify-end relative z-10">
+            <div className="h-full flex flex-col justify-end relative z-10 pt-16 sm:pt-0">
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 w-full">
                 <div className="max-w-xs">
                   <h3 className="text-3xl font-outfit text-white mb-3 underline decoration-[#6B8F5E]/30 decoration-2 underline-offset-8">Land Mapping</h3>
