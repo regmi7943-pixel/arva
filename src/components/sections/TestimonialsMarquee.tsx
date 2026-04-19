@@ -38,14 +38,14 @@ interface ElementState {
 }
 
 const defaultPositions: Record<string, ElementState> = {
-  "img-0": { x: 0, y: 0, scale: 1 },
-  "card-0": { x: 160, y: 40 },
-  "img-1": { x: 420, y: 0, scale: 1 },
-  "card-1": { x: 520, y: 40 },
-  "img-2": { x: 0, y: 460, scale: 1 },
-  "card-2": { x: 160, y: 500 },
-  "img-3": { x: 420, y: 460, scale: 1 },
-  "card-3": { x: 520, y: 500 },
+  "img-0": { "x": 0, "y": 0 },
+  "card-0": { "x": 267, "y": 13 },
+  "img-1": { "x": 779, "y": -194, "scale": 2.1 },
+  "card-1": { "x": 840, "y": -77 },
+  "img-2": { "x": 368, "y": 409, "scale": 2.45 },
+  "card-2": { "x": 130, "y": 463 },
+  "img-3": { "x": 720, "y": 261, "scale": 2.1 },
+  "card-3": { "x": 890, "y": 371 }
 };
 
 const STORAGE_KEY = "arva-testimonial-positions";
@@ -54,7 +54,11 @@ function loadPositions(): Record<string, ElementState> {
   if (typeof window === "undefined") return defaultPositions;
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) return JSON.parse(saved);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      // Merge with defaults to prevent (0,0) overlap if keys are missing
+      return { ...defaultPositions, ...parsed };
+    }
   } catch {}
   return defaultPositions;
 }

@@ -47,7 +47,7 @@ export default function Navbar() {
 
         <div className="flex items-center">
           <Link href="#waitlist">
-            <button className="text-sm font-medium px-5 py-2.5 rounded-full bg-primary text-background hover:bg-primary/90 transition-colors">
+            <button className="text-sm font-medium px-5 py-2.5 rounded-full bg-[#6B8F5E] text-white hover:bg-[#5a7a4f] transition-all">
               Join Waitlist
             </button>
           </Link>

@@ -26,18 +26,21 @@ const STORAGE_KEY = "arva-hero-positions";
 
 // Default coordinates mapped to the 900x600 SVG viewBox
 const defaultState = {
-  product: { scale: 1.25, yOffset: -24 },
-  lines: [
-    { start: { x: 340, y: 260 }, elbowX: 180, endY: 100 },
-    { start: { x: 560, y: 260 }, elbowX: 720, endY: 130 },
-    { start: { x: 340, y: 340 }, elbowX: 160, endY: 470 },
-    { start: { x: 560, y: 340 }, elbowX: 740, endY: 500 },
+  "product": {
+    "scale": 1.15,
+    "yOffset": -24
+  },
+  "lines": [
+    { "start": { "x": 340, "y": 260 }, "elbowX": 180, "endY": 100 },
+    { "start": { "x": 560, "y": 260 }, "elbowX": 720, "endY": 130 },
+    { "start": { "x": 340, "y": 340 }, "elbowX": 160, "endY": 470 },
+    { "start": { "x": 560, "y": 340 }, "elbowX": 740, "endY": 500 }
   ],
-  cards: [
-    { x: 50, y: 60 },
-    { x: 620, y: 90 },
-    { x: 30, y: 430 },
-    { x: 650, y: 460 },
+  "cards": [
+    { "x": -111.72, "y": 167 },
+    { "x": 605.47, "y": 109 },
+    { "x": -100.78, "y": 394 },
+    { "x": 614.84, "y": 357 }
   ]
 };
 
@@ -50,7 +53,10 @@ export default function HeroProduct() {
     setMounted(true);
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
-      try { setState(JSON.parse(saved)); } catch (e) {}
+      try { 
+        const parsed = JSON.parse(saved);
+        setState({ ...defaultState, ...parsed }); 
+      } catch (e) {}
     }
   }, []);
 
@@ -112,8 +118,6 @@ export default function HeroProduct() {
 
   return (
     <div className="relative w-full h-[600px] max-w-4xl mx-auto -mt-8 flex items-center justify-center">
-
-
       <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }} className="w-full h-full relative">
         
         {/* SVG Layer */}
