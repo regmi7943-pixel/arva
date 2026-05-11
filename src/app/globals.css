@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #1C1C1A; /* Deep Charcoal */
+  --surface: #2A2A27;    /* Surface Dark */
+  --primary: #6B8F5E;    /* Sage Green */
+  --accent: #C4704A;     /* Terracotta */
+  --text: #F5F5F0;       /* Warm White */
+  --text-muted: #8E998B; /* Soft Sage/Muted gray-green */
+}
+
+body {
+  color: var(--text);
+  background-color: var(--background);
+  font-family: var(--font-inter);
+}
+
+/* Base utility text settings for better editorial typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-outfit);
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--background);
+}
