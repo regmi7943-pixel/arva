@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import BentoGrid from "@/components/sections/BentoGrid";
 import ProcessScroll from "@/components/sections/ProcessScroll";
 import TestimonialsMarquee from "@/components/sections/TestimonialsMarquee";
@@ -30,7 +30,7 @@ export default function Home() {
             <div className="flex flex-col items-start">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#6B8F5E] animate-pulse"></span>
-                <span className="text-xs font-inter tracking-wider text-[#A3A3A3] uppercase">Avani is coming soon</span>
+                <span className="text-xs font-inter tracking-wider text-[#A3A3A3] uppercase">Avani is now live!</span>
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-outfit font-light tracking-tight text-white max-w-xl mb-6 leading-[1.1]">
@@ -42,17 +42,24 @@ export default function Home() {
                 The intelligent agritech companion for Nepal. We transform localized data into actionable insight—from geospatial soil analysis to predictive crop health.
               </p>
 
-              <div className="flex flex-row items-center gap-3 sm:gap-6">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                <a 
+                  href="/avani.apk"
+                  download="avani.apk"
+                  className="px-6 py-4 rounded-xl bg-[#6B8F5E] text-white font-medium hover:bg-[#5a7a4f] transition-all flex items-center gap-2 group text-sm md:text-base"
+                >
+                  Download APK
+                  <Download className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+                </a>
                 <Link 
-                  href="#waitlist"
-                  className="px-8 py-4 rounded-xl bg-[#6B8F5E] text-white font-medium hover:bg-[#5a7a4f] transition-all flex items-center gap-2 group"
+                  href="#download"
+                  className="px-6 py-4 rounded-xl bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 transition-all text-sm md:text-base"
                 >
                   Join Waitlist
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
                   href="/features"
-                  className="px-8 py-4 rounded-xl bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 transition-all"
+                  className="px-6 py-4 rounded-xl text-white/60 font-medium hover:text-white transition-all text-sm md:text-base"
                 >
                   Explore Features
                 </Link>

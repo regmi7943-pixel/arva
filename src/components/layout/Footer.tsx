@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-6">
               <div className="relative w-8 h-8 flex items-center justify-center">
-                <Image src="/logo.png" alt="Avani Logo" fill className="object-contain" />
+                <Image src="/logo.svg" alt="Avani Logo" fill className="object-contain" />
               </div>
               <span className="font-display font-medium text-xl tracking-wide text-text">Avani</span>
             </Link>

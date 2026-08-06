@@ -30,7 +30,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group" onClick={() => setIsMenuOpen(false)}>
           <div className="relative w-8 h-8 flex items-center justify-center transition-transform group-hover:scale-105">
-            <Image src="/logo.png" alt="Avani Logo" fill className="object-contain" />
+            <Image src="/logo.svg" alt="Avani Logo" fill className="object-contain" />
           </div>
           <span className="font-outfit font-medium text-lg tracking-wide text-white">Avani</span>
         </Link>
